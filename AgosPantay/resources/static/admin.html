@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- ==========================================================================
+     SECTION 01: DOCUMENT HEAD & DEPENDENCIES
+     ========================================================================== -->
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AgosPantay - Water Community Hub Administration Portal</title>
+  <script src="vendor/lucide.min.js" defer></script>
+  <link rel="stylesheet" href="admin.css">
+  <link rel="stylesheet" href="portal.css">
+  <script src="script.js" defer></script>
+  <script src="admin.js" defer></script>
+</head>
+
+<body>
+
+  <!-- ==========================================================================
+       SECTION 02: SIDEBAR NAVIGATION
+       ========================================================================== -->
+  <button type="button" id="portal-menu-backdrop" class="portal-menu-backdrop" aria-label="Close menu" tabindex="-1" hidden></button>
+  <aside id="portal-sidebar">
+    <!-- Brand Logo & Portal Name -->
+    <div class="brand-header">
+      <div class="brand-icon">
+        <img src="logo.png" alt="AgosPantay Logo" onerror="this.outerHTML='<svg viewBox=\'0 0 100 100\' width=\'60\' height=\'60\' xmlns=\'http://www.w3.org/2000/svg\'><rect width=\'100\' height=\'100\' rx=\'22\' fill=\'#0a6b78\'/><path d=\'M30 43 A21 21 0 0 1 70 43 A25 25 0 0 0 30 43 Z\' fill=\'#f5a623\'/><g stroke=\'#f5a623\' stroke-width=\'5.5\' stroke-linecap=\'round\'><line x1=\'50\' y1=\'14\' x2=\'50\' y2=\'22\'/><line x1=\'36\' y1=\'19\' x2=\'40\' y2=\'26\'/><line x1=\'64\' y1=\'19\' x2=\'60\' y2=\'26\'/><line x1=\'25\' y1=\'30\' x2=\'32\' y2=\'34\'/><line x1=\'75\' y1=\'30\' x2=\'68\' y2=\'34\'/></g><text x=\'50\' y=\'71\' text-anchor=\'middle\' font-family=\'Poppins,Inter,sans-serif\' font-weight=\'800\' font-size=\'40\' fill=\'#ffffff\' letter-spacing=\'-1.5\'>aP</text><path d=\'M16 79 Q34 86 52 78 T84 76 Q66 86 48 84 T16 79 Z\' fill=\'#14b8c4\'/></svg>'">
+      </div>
+      <div class="brand-info">
+        <h1 data-community-name>AgosPantay</h1>
+        <p>Water Community Hub</p>
+      </div>
+    </div>
+
+    <!-- Active Workspace Indicator -->
+    <div class="demo-selector">
+      <div class="demo-dot"></div>
+      <span>AgosPantay</span>
+    </div>
+
+    <div class="sidebar-section-label">Workspace</div>
+
+    <!-- Navigation Links -->
+    <ul class="nav-list">
+      <li class="nav-item">
+        <a class="nav-link active" href="#dashboard" data-tab="dashboard" onclick="switchTab('dashboard'); return false;">
+          <i data-lucide="layout-grid"></i>
+          <span>Dashboard</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#residents" data-tab="residents" onclick="switchTab('residents'); return false;">
+          <i data-lucide="user"></i>
+          <span>Residents</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#zones" data-tab="zones" onclick="switchTab('zones'); return false;">
+          <i data-lucide="map-pin"></i>
+          <span>Barangay &amp; Zones</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#sources" data-tab="sources" onclick="switchTab('sources'); return false;">
+          <i data-lucide="disc"></i>
+          <span>Water Sources</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#schedules" data-tab="schedules" onclick="switchTab('schedules'); return false;">
+          <i data-lucide="calendar"></i>
+          <span>Distribution Schedules</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#allocation" data-tab="allocation" onclick="switchTab('allocation'); return false;">
+          <i data-lucide="columns"></i>
+          <span>Water Allocation</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#personnel" data-tab="personnel" onclick="switchTab('personnel'); return false;">
+          <i data-lucide="user-check"></i>
+          <span>Distribution Personnel</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#announcements" data-tab="announcements" onclick="switchTab('announcements'); return false;">
+          <i data-lucide="megaphone"></i>
+          <span>Announcements</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#reports" data-tab="reports" onclick="switchTab('reports'); return false;">
+          <i data-lucide="flag"></i>
+          <span>Reports &amp; Complaints</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#requests" data-tab="requests" onclick="switchTab('requests'); return false;">
+          <i data-lucide="plus"></i>
+          <span>Water Requests</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#analytics" data-tab="analytics" onclick="switchTab('analytics'); return false;">
+          <i data-lucide="bar-chart-2"></i>
+          <span>Analytics &amp; Reports</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#history" data-tab="history" onclick="switchTab('history'); return false;">
+          <i data-lucide="history"></i>
+          <span>Records History</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#logs" data-tab="logs" onclick="switchTab('logs'); return false;">
+          <i data-lucide="activity"></i>
+          <span>Activity Logs</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#settings" data-tab="settings" onclick="switchTab('settings'); return false;">
+          <i data-lucide="settings"></i>
+          <span>System Settings</span>
+        </a>
+      </li>
+    </ul>
+
+    <!-- Sidebar User Profile & Sign Out -->
+    <div class="sidebar-footer">
+      <div class="user-profile-sm">
+        <div class="avatar-sm">S</div>
+        <div class="user-details">
+          <h4>System Administrator</h4>
+          <p>ADMIN</p>
+        </div>
+      </div>
+      <a class="signout-btn" href="/" onclick="AgosAuth.signOut(); return false;">
+        <i data-lucide="log-out" style="width: 14px; height: 14px;"></i>
+        <span>Sign out</span>
+      </a>
+    </div>
+  </aside>
+  <!-- END SECTION 02: SIDEBAR NAVIGATION -->
+
+  <!-- ==========================================================================
+       SECTION 03: MAIN WRAPPER & TOP HEADER
+       ========================================================================== -->
+  <div class="main-wrapper">
+    <header>
+      <button type="button" id="portal-menu-toggle" class="portal-menu-toggle" aria-controls="portal-sidebar" aria-expanded="false">Menu</button>
+      <div class="header-title">
+        <p>Administration Portal</p>
+        <h2 id="page-title">Dashboard</h2>
+      </div>
+      <div class="header-right">
+        <div class="icon-btn connection-icon">
+          <i data-lucide="plug" style="width: 18px; height: 18px;"></i>
+          <div class="notification-dot"></div>
+        </div>
+        <div class="header-user" style="display: flex; align-items: center; gap: 10px;">
+          <div class="avatar-sm">S</div>
+          <div class="user-details">
+            <h4 style="color: var(--text-main);">System Administrator</h4>
+            <p>ADMIN</p>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="content-area">
+
+      <!-- ======================================================================
+           SECTION 04: DASHBOARD OVERVIEW VIEW
+           ====================================================================== -->
+      <div id="view-dashboard" class="view-pane active">
+        <div class="section-header">
+          <div class="section-title">
+            <h3>Community water overview</h3>
+            <p>Monitor distribution, community concerns, and water supply activity.</p>
+          </div>
+          <div class="date-badge">
+            <i data-lucide="clock" style="width: 14px; height: 14px;"></i>
+            <span id="today-label"></span>
+          </div>
+        </div>
+
+        <!-- Summary Statistic Cards -->
+        <div class="stats-grid">
+          <div class="stat-card">
+            <div class="stat-card-top">
+              <span>Registered residents</span>
+              <div class="stat-icon"><i data-lucide="user" style="width: 16px; height: 16px;"></i></div>
+            </div>
+            <h2 id="dash-stat-residents">1</h2>
+            <div class="stat-card-footer">Across the system</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-card-top">
+              <span>Distribution schedules</span>
+              <div class="stat-icon"><i data-lucide="layout-grid" style="width: 16px; height: 16px;"></i></div>
+            </div>
+            <h2 id="dash-stat-schedules">1</h2>
+            <div class="stat-card-footer">Recorded schedules</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-card-top">
+              <span>Pending reports</span>
+              <div class="stat-icon"><i data-lucide="flag" style="width: 16px; height: 16px;"></i></div>
+            </div>
+            <h2 id="dash-stat-reports">1</h2>
+            <div class="stat-card-footer">Needs attention</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-card-top">
+              <span>Announcements</span>
+              <div class="stat-icon"><i data-lucide="file-text" style="width: 16px; height: 16px;"></i></div>
+            </div>
+            <h2 id="dash-stat-announcements">1</h2>
+            <div class="stat-card-footer">Published updates</div>
+          </div>
+        </div>
+
+        <!-- Latest Reports & Announcements Preview -->
+        <div class="two-column-grid">
+          <div class="dashboard-card">
+            <div class="card-header">
+              <div class="card-title-group">
+                <h4>Latest community reports</h4>
+                <p>Recent submissions requiring review</p>
+              </div>
+              <button class="btn-secondary" onclick="switchTab('reports')">View all &rarr;</button>
+            </div>
+            <div id="dash-latest-reports-container"></div>
+          </div>
+
+          <div class="dashboard-card">
+            <div class="card-header">
+              <div class="card-title-group">
+                <h4>Latest announcements</h4>
+                <p>Official water service updates</p>
+              </div>
+              <button class="btn-secondary" onclick="switchTab('announcements')">View all &rarr;</button>
+            </div>
+            <div id="dash-latest-announcements-container"></div>
+          </div>
+        </div>
+
+        <!-- Water Availability Overview -->
+        <div class="full-width-card dashboard-card">
+          <div class="card-header" style="margin-bottom: 12px;">
+            <div class="card-title-group">
+              <h4>Water availability by service area</h4>
+              <p>Administrator-recorded supply conditions · no map or GPS tracking</p>
+            </div>
+            <button class="btn-secondary" onclick="switchTab('sources')">Manage sources</button>
+          </div>
+          <div id="dash-sources-container"></div>
+        </div>
+      </div>
+
+      <!-- ======================================================================
+           SECTION 05: MANAGEMENT MODULES (CRUD TABLES)
+           ====================================================================== -->
+
+      <!-- MODULE 2: RESIDENTS VIEW -->
+      <div id="view-residents" class="view-pane">
+        <div class="dashboard-card">
+          <div class="card-header">
+            <div class="card-title-group">
+              <h4>Registered Residents</h4>
+              <p>Manage community users, verify locations, and handle account status.</p>
+            </div>
+            <button class="btn-primary" onclick="openModal('residents')">+ Add new</button>
+          </div>
+          <div class="table-toolbar">
+            <input type="text" id="search-residents" class="search-input" placeholder="Search records..." oninput="renderTable('residents')">
+            <select id="filter-residents" class="select-input" onchange="renderTable('residents')">
+              <option value="ALL">All statuses</option>
+              <option value="Active">Active</option>
+              <option value="Pending">Pending</option>
+            </select>
+            <button class="btn-refresh" onclick="refreshAdminData()"><i data-lucide="rotate-cw" style="width:14px;"></i> Refresh</button>
+          </div>
+          <div class="table-responsive">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Resident</th>
+                  <th>Area / Address</th>
+                  <th>Status</th>
+                  <th>Contact</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody id="tbody-residents"></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- MODULE 3: BARANGAY & ZONES VIEW -->
+      <div id="view-zones" class="view-pane">
+        <div class="dashboard-card">
+          <div class="card-header">
+            <div class="card-title-group">
+              <h4>Barangay &amp; Zone Management</h4>
+              <p>Organize communities, barangays, puroks, and service subdivisions.</p>
+            </div>
+            <button class="btn-primary" onclick="openModal('zones')">+ Add new</button>
+          </div>
+          <div class="table-toolbar">
+            <input type="text" id="search-zones" class="search-input" placeholder="Search records..." oninput="renderTable('zones')">
+            <button class="btn-refresh" onclick="refreshAdminData()"><i data-lucide="rotate-cw" style="width:14px;"></i> Refresh</button>
+          </div>
+          <div class="table-responsive">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Community &amp; Barangay</th>
+                  <th>Purok / Zone</th>
+                  <th>Description</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody id="tbody-zones"></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- MODULE 4: WATER SOURCES VIEW -->
+      <div id="view-sources" class="view-pane">
+        <div class="dashboard-card">
+          <div class="card-header">
+            <div class="card-title-group">
+              <h4>Water Source Monitoring</h4>
+              <p>Register water sources and record their conditions. A source can serve multiple areas.</p>
+            </div>
+            <button class="btn-primary" onclick="openModal('sources')">+ Add new</button>
+          </div>
+          <div class="table-toolbar">
+            <input type="text" id="search-sources" class="search-input" placeholder="Search records..." oninput="renderTable('sources')">
+            <select id="filter-sources" class="select-input" onchange="renderTable('sources')">
+              <option value="ALL">All statuses</option>
+              <option value="Normal">Normal</option>
+              <option value="Low Supply">Low Supply</option>
+              <option value="Interrupted">Interrupted</option>
+            </select>
+            <button class="btn-refresh" onclick="refreshAdminData()"><i data-lucide="rotate-cw" style="width:14px;"></i> Refresh</button>
+          </div>
+          <div class="table-responsive">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Record</th>
+                  <th>Area</th>
+                  <th>Status</th>
+                  <th>Date</th>
+                  <th>Details</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody id="tbody-sources"></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- MODULE 5: DISTRIBUTION SCHEDULES VIEW -->
+      <div id="view-schedules" class="view-pane">
+        <div class="dashboard-card">
+          <div class="card-header">
+            <div class="card-title-group">
+              <h4>Water Distribution Schedules</h4>
+              <p>Publish, modify, and cancel schedules for specific service areas.</p>
+            </div>
+            <button class="btn-primary" onclick="openModal('schedules')">+ Add new</button>
+          </div>
+          <div class="table-toolbar">
+            <input type="text" id="search-schedules" class="search-input" placeholder="Search records..." oninput="renderTable('schedules')">
+            <select id="filter-schedules" class="select-input" onchange="renderTable('schedules')">
+              <option value="ALL">All statuses</option>
+              <option value="Scheduled">Scheduled</option>
+              <option value="Ongoing">Ongoing</option>
+              <option value="Completed">Completed</option>
+              <option value="Cancelled">Cancelled</option>
+            </select>
+            <button class="btn-refresh" onclick="refreshAdminData()"><i data-lucide="rotate-cw" style="width:14px;"></i> Refresh</button>
+          </div>
+          <div class="table-responsive">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Record</th>
+                  <th>Area</th>
+                  <th>Status</th>
+                  <th>Date</th>
+                  <th>Details</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody id="tbody-schedules"></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- MODULE 6: WATER ALLOCATION VIEW -->
+      <div id="view-allocation" class="view-pane">
+        <div class="dashboard-card">
+          <div class="card-header">
+            <div class="card-title-group">
+              <h4>Water Allocation Records</h4>
+              <p>Record planned and actual water quantities to support fair distribution.</p>
+            </div>
+            <button class="btn-primary" onclick="openModal('allocation')">+ Add new</button>
+          </div>
+          <div class="table-toolbar">
+            <input type="text" id="search-allocation" class="search-input" placeholder="Search records..." oninput="renderTable('allocation')">
+            <select id="filter-allocation" class="select-input" onchange="renderTable('allocation')">
+              <option value="ALL">All statuses</option>
+              <option value="Recorded">Recorded</option>
+              <option value="Pending">Pending</option>
+            </select>
+            <button class="btn-refresh" onclick="refreshAdminData()"><i data-lucide="rotate-cw" style="width:14px;"></i> Refresh</button>
+          </div>
+          <div class="table-responsive">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Record</th>
+                  <th>Area</th>
+                  <th>Status</th>
+                  <th>Date</th>
+                  <th>Details</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody id="tbody-allocation"></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- MODULE 7: DISTRIBUTION PERSONNEL VIEW -->
+      <div id="view-personnel" class="view-pane">
+        <div class="dashboard-card">
+          <div class="card-header">
+            <div class="card-title-group">
+              <h4>Distribution Personnel</h4>
+              <p>Manage authorized personnel assigned to distribution activities.</p>
+            </div>
+            <button class="btn-primary" onclick="openModal('personnel')">+ Add new</button>
+          </div>
+          <div class="table-toolbar">
+            <input type="text" id="search-personnel" class="search-input" placeholder="Search records..." oninput="renderTable('personnel')">
+            <select id="filter-personnel" class="select-input" onchange="renderTable('personnel')">
+              <option value="ALL">All statuses</option>
+              <option value="Active">Active</option>
+              <option value="On-Leave">On-Leave</option>
+            </select>
+            <button class="btn-refresh" onclick="refreshAdminData()"><i data-lucide="rotate-cw" style="width:14px;"></i> Refresh</button>
+          </div>
+          <div class="table-responsive">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Personnel Name</th>
+                  <th>Assigned Area</th>
+                  <th>Status</th>
+                  <th>Contact</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody id="tbody-personnel"></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- MODULE 8: ANNOUNCEMENTS VIEW -->
+      <div id="view-announcements" class="view-pane">
+        <div class="dashboard-card">
+          <div class="card-header">
+            <div class="card-title-group">
+              <h4>Announcements &amp; Advisories</h4>
+              <p>Publish community-wide or area-specific official updates.</p>
+            </div>
+            <button class="btn-primary" onclick="openModal('announcements')">+ Add new</button>
+          </div>
+          <div class="table-toolbar">
+            <input type="text" id="search-announcements" class="search-input" placeholder="Search records..." oninput="renderTable('announcements')">
+            <select id="filter-announcements" class="select-input" onchange="renderTable('announcements')">
+              <option value="ALL">All statuses</option>
+              <option value="Published">Published</option>
+              <option value="Draft">Draft</option>
+            </select>
+            <button class="btn-refresh" onclick="refreshAdminData()"><i data-lucide="rotate-cw" style="width:14px;"></i> Refresh</button>
+          </div>
+          <div class="table-responsive">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Record</th>
+                  <th>Area</th>
+                  <th>Status</th>
+                  <th>Date</th>
+                  <th>Details</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody id="tbody-announcements"></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- MODULE 9: REPORTS & COMPLAINTS VIEW -->
+      <div id="view-reports" class="view-pane">
+        <div class="dashboard-card">
+          <div class="card-header">
+            <div class="card-title-group">
+              <h4>Water Reports &amp; Complaints</h4>
+              <p>Submit and investigate water concerns. Suspected contamination is not a confirmed finding.</p>
+            </div>
+            <button class="btn-primary" onclick="openModal('reports')">+ Add new</button>
+          </div>
+          <div class="table-toolbar">
+            <input type="text" id="search-reports" class="search-input" placeholder="Search records..." oninput="renderTable('reports')">
+            <select id="filter-reports" class="select-input" onchange="renderTable('reports')">
+              <option value="ALL">All statuses</option>
+              <option value="Submitted">Submitted</option>
+              <option value="Under Review">Under Review</option>
+              <option value="Action Taken">Action Taken</option>
+              <option value="Resolved">Resolved</option>
+              <option value="Rejected">Rejected</option>
+            </select>
+            <button class="btn-refresh" onclick="refreshAdminData()"><i data-lucide="rotate-cw" style="width:14px;"></i> Refresh</button>
+            <button class="btn-refresh" onclick="exportCSV()"><i data-lucide="download" style="width:14px;"></i> Export CSV</button>
+          </div>
+          <div class="table-responsive">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Record</th>
+                  <th>Area</th>
+                  <th>Status</th>
+                  <th>Date</th>
+                  <th>Details</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody id="tbody-reports"></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- MODULE 10: WATER REQUESTS VIEW -->
+      <div id="view-requests" class="view-pane">
+        <div class="dashboard-card">
+          <div class="card-header">
+            <div class="card-title-group">
+              <h4>Emergency Water Requests</h4>
+              <p>Review emergency household requests for extra water distribution.</p>
+            </div>
+            <button class="btn-primary" onclick="openModal('requests')">+ Add new</button>
+          </div>
+          <div class="table-toolbar">
+            <input type="text" id="search-requests" class="search-input" placeholder="Search records..." oninput="renderTable('requests')">
+            <select id="filter-requests" class="select-input" onchange="renderTable('requests')">
+              <option value="ALL">All statuses</option>
+              <option value="Submitted">Submitted</option>
+              <option value="Under Review">Under Review</option>
+              <option value="Approved">Approved</option>
+              <option value="Rejected">Rejected</option>
+              <option value="Fulfilled">Fulfilled</option>
+            </select>
+            <button class="btn-refresh" onclick="refreshAdminData()"><i data-lucide="rotate-cw" style="width:14px;"></i> Refresh</button>
+          </div>
+          <div class="table-responsive">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Record</th>
+                  <th>Area</th>
+                  <th>Status</th>
+                  <th>Date</th>
+                  <th>Details</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody id="tbody-requests"></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- ======================================================================
+           SECTION 06: ANALYTICS, HISTORY, LOGS & SYSTEM SETTINGS
+           ====================================================================== -->
+
+      <!-- MODULE 11: ANALYTICS & REPORTS VIEW -->
+      <div id="view-analytics" class="view-pane">
+        <div class="stats-grid">
+          <div class="stat-card">
+            <div class="stat-card-top"><span>Total reports</span></div>
+            <h2 id="analytics-total-reports">1</h2>
+          </div>
+          <div class="stat-card">
+            <div class="stat-card-top"><span>Schedules</span></div>
+            <h2 id="analytics-total-schedules">1</h2>
+          </div>
+          <div class="stat-card">
+            <div class="stat-card-top"><span>Water sources</span></div>
+            <h2 id="analytics-total-sources">1</h2>
+          </div>
+          <div class="stat-card">
+            <div class="stat-card-top"><span>Resolved reports</span></div>
+            <h2 id="analytics-resolved-reports">0</h2>
+          </div>
+        </div>
+
+        <div class="two-column-grid">
+          <div class="dashboard-card">
+            <div class="card-header">
+              <div class="card-title-group">
+                <h4>Reports by category</h4>
+              </div>
+            </div>
+            <div id="analytics-categories-list" style="display: flex; flex-direction: column; gap: 12px;"></div>
+          </div>
+
+          <div class="dashboard-card">
+            <div class="card-header">
+              <div class="card-title-group">
+                <h4>Report status summary</h4>
+              </div>
+            </div>
+            <div id="analytics-status-list" style="display: flex; flex-direction: column; gap: 12px;"></div>
+          </div>
+        </div>
+
+        <div class="dashboard-card">
+          <div class="card-header">
+            <div class="card-title-group">
+              <h4>Distribution performance</h4>
+              <p>Compare schedule status and recorded actual delivery details.</p>
+            </div>
+            <button class="btn-secondary" onclick="switchTab('history')">View history</button>
+          </div>
+          <div style="background-color: #ecfdf5; border-radius: 8px; padding: 14px 18px; color: #0f766e; font-size: 13px;">
+            Performance metrics are based on records entered by authorized personnel. Enter actual start/end times and quantities in schedule and allocation records for more complete analysis.
+          </div>
+        </div>
+      </div>
+
+      <!-- MODULE 12: RECORDS HISTORY VIEW -->
+      <div id="view-history" class="view-pane">
+        <div class="dashboard-card">
+          <div class="card-header">
+            <div class="card-title-group">
+              <h4>Water distribution and complaint history</h4>
+              <p>Historical records across system modules</p>
+            </div>
+          </div>
+          <div class="table-responsive">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Record</th>
+                  <th>Module</th>
+                  <th>Area</th>
+                  <th>Status</th>
+                  <th>Date</th>
+                </tr>
+              </thead>
+              <tbody id="tbody-history"></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- MODULE 13: ACTIVITY LOGS VIEW -->
+      <div id="view-logs" class="view-pane">
+        <div class="dashboard-card">
+          <div class="card-header">
+            <div class="card-title-group">
+              <h4>System Activity Logs</h4>
+              <p>Audit trail of administrator updates and record changes.</p>
+            </div>
+          </div>
+          <div class="table-responsive">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Timestamp</th>
+                  <th>User</th>
+                  <th>Action performed</th>
+                </tr>
+              </thead>
+              <tbody id="tbody-logs"></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- MODULE 14: SYSTEM SETTINGS VIEW -->
+      <div id="view-settings" class="view-pane">
+        <div class="dashboard-card">
+          <div class="card-header">
+            <div class="card-title-group">
+              <h4>System Settings</h4>
+              <p>Configure general community options and administrative defaults.</p>
+            </div>
+          </div>
+          <form id="settings-form" style="padding: 0;" onsubmit="savePortalSettings(event)">
+            <div class="form-group">
+              <label for="settings-community">Community Portal Name</label>
+              <input type="text" id="settings-community" class="form-control" maxlength="100" required>
+            </div>
+            <div class="form-group">
+              <label for="settings-barangay">Primary Barangay</label>
+              <input type="text" id="settings-barangay" class="form-control" maxlength="100" required>
+            </div>
+            <button type="submit" class="btn-primary">Save settings</button>
+          </form>
+        </div>
+      </div>
+
+    </main>
+
+    <footer class="page-footer">
+      AgosPantay · Community-led water access and accountability
+    </footer>
+  </div>
+
+  <!-- ==========================================================================
+       SECTION 07: MODAL DIALOG & SYSTEM NOTIFICATIONS
+       ========================================================================== -->
+  <div id="app-modal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-title" aria-hidden="true" inert>
+    <div class="modal-container">
+      <div class="modal-header">
+        <h3 id="modal-title">Add Record</h3>
+        <button type="button" class="modal-close" aria-label="Close dialog" onclick="closeModal()">
+          <i data-lucide="x" style="width:18px;"></i>
+        </button>
+      </div>
+      <form id="modal-form" onsubmit="handleFormSubmit(event)">
+        <div class="modal-body" id="modal-fields"></div>
+        <div class="modal-footer">
+          <button type="button" class="btn-cancel" onclick="closeModal()">Cancel</button>
+          <button type="submit" class="btn-primary">Save record</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div id="portal-message" class="portal-message" role="status" aria-live="polite" hidden></div>
+
+</body>
+</html>

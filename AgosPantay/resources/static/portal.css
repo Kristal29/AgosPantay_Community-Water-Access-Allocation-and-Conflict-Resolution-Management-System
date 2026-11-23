@@ -1,0 +1,159 @@
+/* ==========================================================================
+   SECTION 01: TYPOGRAPHY & PORTAL NOTIFICATION TOAST
+   ========================================================================== */
+@font-face {
+  font-family: Inter;
+  src: url('vendor/inter-latin.woff2') format('woff2');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+.portal-menu-toggle,
+.portal-menu-backdrop {
+  display: none;
+}
+
+.portal-message {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 120;
+  max-width: min(420px, calc(100% - 40px));
+  padding: 13px 16px;
+  border-radius: 8px;
+  background: var(--sidebar-bg);
+  color: white;
+  font-size: 13px;
+  overflow-wrap: anywhere;
+}
+
+.portal-message[hidden] {
+  display: none;
+}
+
+#portal-sidebar .brand-info {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+/* ==========================================================================
+   SECTION 02: MOBILE SLIDE-OUT SIDEBAR & BACKDROP (<= 740px)
+   ========================================================================== */
+@media (max-width: 740px) {
+  #portal-sidebar {
+    display: none;
+    position: fixed;
+    inset: 0 auto 0 0;
+    height: 100%;
+    width: min(285px, 85vw);
+    box-shadow: 12px 0 32px rgba(15, 23, 42, 0.18);
+    z-index: 45;
+  }
+
+  body.portal-menu-open {
+    overflow: hidden;
+  }
+
+  .portal-menu-open #portal-sidebar {
+    display: flex;
+  }
+
+  .portal-menu-open .portal-menu-backdrop:not([hidden]) {
+    display: block;
+    position: fixed;
+    inset: 0;
+    z-index: 40;
+    width: 100%;
+    border: 0;
+    background: rgba(15, 23, 42, 0.48);
+  }
+
+  .portal-menu-toggle {
+    display: inline-flex;
+    flex: none;
+    align-items: center;
+    min-height: 40px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 0 10px;
+    background: var(--card-bg);
+    color: var(--text-main);
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+  }
+
+  /* ========================================================================
+     SECTION 03: RESPONSIVE HEADER, CARDS & MODAL OVERRIDES
+     ======================================================================== */
+  header {
+    min-height: 66px;
+    height: auto;
+    padding: 8px 12px;
+    gap: 10px;
+  }
+
+  .header-title {
+    min-width: 0;
+    flex: 1;
+  }
+
+  .header-title h2 {
+    font-size: 16px;
+    overflow-wrap: anywhere;
+  }
+
+  .header-title p {
+    font-size: 9px;
+  }
+
+  .header-right {
+    gap: 7px;
+  }
+
+  .header-user .user-details,
+  .header-right .connection-icon {
+    display: none;
+  }
+
+  .content-area {
+    padding: 16px 12px;
+  }
+
+  .dashboard-card {
+    padding: 16px 12px;
+    min-width: 0;
+  }
+
+  .card-header,
+  .table-toolbar {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .table-toolbar .search-input {
+    width: 100%;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .modal-overlay {
+    width: 100%;
+    height: 100%;
+    padding: 12px;
+  }
+
+  .modal-container {
+    max-height: 100%;
+    overflow: auto;
+  }
+
+  .modal-header,
+  .modal-body,
+  .modal-footer {
+    padding-inline: 16px;
+  }
+}
