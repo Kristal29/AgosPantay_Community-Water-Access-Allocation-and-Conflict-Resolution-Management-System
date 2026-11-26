@@ -93,17 +93,17 @@ To develop AgosPantay, a Java-based web application that provides a centralized 
  
 | Feature | Description |
 |---|---|
-| Resident Dashboard | Overview of schedules, water source conditions, active personnel, reports, requests, and announcements |
-| My Water Schedule | Distribution schedules for the resident's registered service area |
-| Schedule Calendar | Monthly calendar view of distribution dates |
-| Announcements | Official announcements and service advisories |
-| Submit a Report | Report weak flow, damaged pipes, water quality concerns, delays, interruptions, and unequal distribution |
-| My Reports | View submitted reports, statuses, and administrator responses |
-| Water Assistance | Request additional water supply and track progress |
-| Notifications | Updates on announcements, reports, and requests, with read/unread tracking |
-| My Profile | Manage personal information and service area details |
-| Water Conservation | Practical guidelines on proper water usage |
-| Emergency Contacts | Contact information for barangay officials and emergency personnel |
+| Resident Dashboard |Displays an overview of the resident's water schedules, water source conditions, active personnel, submitted reports, assistance requests, and community announcements. |
+| My Water Schedule |Allows residents to view water distribution schedules applicable to their registered service area. |
+| Schedule Calendar | Presents water distribution schedules in a monthly calendar format for easier viewing of distribution dates.|
+| Announcements | Allows residents to view official community announcements, water distribution updates, and service advisories. |
+| Submit a Report | Enables residents to submit reports about water-related problems, including weak water flow, damaged pipes, water quality concerns, delayed schedules, interruptions, and unequal distribution. |
+| My Reports | Allows residents to view their submitted reports, monitor their statuses, and read official responses from administrators. |
+| Water Assistance | Allows residents to submit requests for additional water supply and monitor the progress of their requests. |
+| Notifications | Displays relevant updates regarding announcements, reports, and water assistance requests, including read and unread notifications. |
+| My Profile | Allows residents to view and manage their personal information and registered service area details. |
+| Water Conservation | Provides residents with practical guidelines and information about proper water usage and conservation. |
+| Emergency Contacts | Displays important contact information for barangay officials and other relevant community emergency personnel.|
  
 ### Administrator Portal
  
