@@ -26,19 +26,19 @@
 
 ## ✍🏻Project Description
 
-**AgosPantay** is a centralized Java application that allows for communication between the community members and water management personnel via **Resident** and **Administrator** portals.
+**AgosPantay** is a centralized Java application that connects community residents with water management personnel through separate via **Resident** and **Administrator** portals.
 
-Residents can access the water distribution schedule, water source conditions, distribution personnel, and notifications. Residents can also submit water-related reports, request water assistance, and monitor their status. The administrators will be able to manage community records, set up distribution schedules, document water source conditions and allocation, review resident reports and requests, and generate analytics and record history.
+The system allows residents to view water distribution schedules, local water source conditions, active distribution personnel, and announcements, as well as submit water-related reports, request water assistance, and monitor the status of their submissions. Meanwhile, administrators can manage community records, maintain distribution schedules, record water source conditions and allocation information, review resident reports and requests, view analytics and record histories, and provide official responses.
 
-AgosPantay is intended to enhance communication, documentation, transparency, and coordination of the community water distribution process.
+Through these functionalities, AgosPantay aims to improve communication, record management, transparency, and coordination in community water distribution process.
 
 ## Problem Being Addressed
 
-Some barangays in the community get their water from natural sources like mountain springs, rivers, and water distribution systems maintained by the community, rather than being connected to water utilities or suppliers. Water distribution in the barangays follows a schedule where the water can be distributed to different houses or services.
+Some communities, particularly barangays located near or at the foot of mountains, depend on natural water sources such as mountain springs, rivers, and community-managed water systems instead of being connected to established water service providers. In these communities, water distribution is commonly managed through scheduled opening and closing times to ensure that available water reaches different households and service areas.
 
-However, there are cases where residents experience delays in the schedule, poor water pressure, inadequate water supply, water service disruptions, and uneven distribution of water. Houses that are situated at higher places or far from the source receive less water pressure than those closer to the source. During dry season and scarcity of water, the situation becomes worse and affects the daily routines of residents.
+However, residents may experience several problems, including delayed distribution schedules, weak water flow, insufficient water supply, unexpected service interruptions, and unequal water distribution. Households located in higher areas or farther from the main water source may experience lower water pressure or receive insufficient water compared to those located closer to the source. During dry seasons or periods of limited water availability, these problems may become more serious and affect the daily activities of residents.
 
-Moreover, residents lack an organized system of filing complaints and requesting additional water services and information about their complaints. Without having records, the officials of the barangay find it difficult to organize their schedule, monitor the water condition, and report back to the household concerned.
+Another concern is the difficulty of communicating water-related problems to the personnel responsible for managing community water distribution. Residents may have no organized way to submit complaints, request additional water assistance, or monitor the progress of their submitted concerns. Without a centralized record-keeping system, barangay officials and water management personnel may also experience difficulties organizing distribution schedules, monitoring reported water conditions, managing requests, and providing updates to affected households.
 
 ## Project Objectives
 ### General Objective
