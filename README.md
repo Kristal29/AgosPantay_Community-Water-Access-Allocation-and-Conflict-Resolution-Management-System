@@ -64,16 +64,7 @@ To develop AgosPantay, a Java-based web application that provides a centralized 
 ## 👥Target Users
 | Target User | How They Will Use the System |
 |---|---|
-| **Community Residents** |•	Register an account and securely sign in.
-•	Complete and update their personal profiles and service area information.
-•	View water distribution schedules, local water source status, and assigned distribution personnel relevant to their registered area.
-•	Check distribution dates using the schedule calendar.
-•	Read community announcements and water service advisories.
-•	Submit reports concerning water distribution problems.
-•	Request additional water assistance.
-•	Track the status of their submitted reports and requests using tracking codes.
-•	View administrator responses and mark notifications as read.
-•	Access water conservation information and emergency contact details.|
+| **Community Residents** |•	Register an account and securely sign in. •	Complete and update their personal profiles and service area information. •	View water distribution schedules, local water source status, and assigned distribution personnel relevant to their registered area. •	Check distribution dates using the schedule calendar. •	Read community announcements and water service advisories. •	Submit reports concerning water distribution problems. •	Request additional water assistance. •	Track the status of their submitted reports and requests using tracking codes. •	View administrator responses and mark notifications as read. •	Access water conservation information and emergency contact details.|
 | **Barangay Officials and Water Management Personnel (Administrators)** | •	View the community water management dashboard.
 •	Manage registered resident accounts and account statuses
 •	Organize barangays, zones, and service areas.
