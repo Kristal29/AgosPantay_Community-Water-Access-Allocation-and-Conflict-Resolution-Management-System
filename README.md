@@ -62,10 +62,31 @@ To develop AgosPantay, a Java-based web application that provides a centralized 
 13.	To improve the accessibility of community water information by allowing residents and administrators to access their respective portals through desktop and mobile web browsers connected to the same network as the running application.
 
 ## 👥Target Users
-| User | How they use AgosPantay |
+| Target User | How They Will Use the System |
 |---|---|
-| **Community Residents** | Register and sign in, manage their profile and service area, view schedules and the schedule calendar, read announcements, submit reports, request water assistance, track submissions with tracking codes, view administrator responses, mark notifications as read, and access water conservation tips and emergency contacts |
-| **Barangay Officials and Water Management Personnel (Administrators)** | View the dashboard, manage residents and account statuses, organize barangays and zones, maintain water source records, create schedules, maintain allocation records, manage personnel, publish announcements, review reports and requests, update statuses and respond, review analytics, records history, and activity logs, and manage portal settings |
+| **Community Residents** | •	Register an account and securely sign in.
+•	Complete and update their personal profiles and service area information.
+•	View water distribution schedules, local water source status, and assigned distribution personnel relevant to their registered area.
+•	Check distribution dates using the schedule calendar.
+•	Read community announcements and water service advisories.
+•	Submit reports concerning water distribution problems.
+•	Request additional water assistance.
+•	Track the status of their submitted reports and requests using tracking codes.
+•	View administrator responses and mark notifications as read.
+•	Access water conservation information and emergency contact details.|
+| **Barangay Officials and Water Management Personnel (Administrators)** | •	View the community water management dashboard.
+•	Manage registered resident accounts and account statuses
+•	Organize barangays, zones, and service areas.
+•	Maintain water source information and recorded supply conditions.
+•	Create and manage water distribution schedules.
+•	Maintain water allocation records.
+•	Manage water management personnel information.
+•	Publish announcements and advisories.
+•	Review resident reports and complaints.
+•	Review and process water assistance requests.
+•	Update submission statuses and provide official responses.
+•	Review analytics summaries, complete records history, and system activity logs.
+•	Manage portal community and barangay settings. |
 
 ## ✨Main Features
 ### Resident Portal
