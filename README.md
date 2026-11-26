@@ -47,19 +47,19 @@ To develop AgosPantay, a Java-based web application that provides a centralized 
 
 ### Specific Objectives
 
-1. Provide a centralized resident and administrator portal with structured access to information about water distribution in the community and functionality for managing it.
-2. Introduce the process of registering and authenticating residents so that they can create accounts, log in to them, and manage their profiles and service area information.
-3. Create the function of scheduling water distribution with the schedule list and monthly calendar.
-4. Introduce the feature of making announcements and advice about water distribution, service interruptions, and other information related to water in the community.
-5. Include a function for making water distribution reports, which would include reports on weak water flow, pipe damage, water quality, shortage of water, delayed schedules, etc.
-6. Introduce the function of requesting additional water, which would be made by residents and would be visible.
-7. Introduce the feature of submission tracking, which would provide a tracking reference number and an opportunity for residents to view the official answer of administrator.
-8. Introduce an administrator management portal for residents, barangays, and service zones, water sources, schedules, allocation history, personnel, announcements, reports, requests, analytics, record history, etc.
-9. Include water source monitoring and recording for checking water availability and service conditions in different service areas.
-10. Keep records of accounts, schedules, reports, requests, actions, and status of administrators in an organized way in a centralized database.
-11. Introduce activity logs and read receipts.
-12. Use the four basic principles of OOP (abstraction, encapsulation, inheritance, polymorphism) in Java classes, business logic, and submission management.
-13. Provide the possibility of logging in to portals of residents and administrators from desktop and mobile browsers from the same network where the application is running.
+1.	To develop a centralized resident and administrator portal that provides organized access to community water distribution information and management functionalities.
+2.	To implement a resident registration and authentication feature that allows community members to create accounts, sign in securely, and manage their personal profiles and service area information.
+3.	To provide a water distribution scheduling feature that allows residents to view their assigned distribution schedules and check upcoming distribution dates through a schedule list and monthly calendar.
+4.	To develop an announcement and advisory feature that enables administrators to publish important updates regarding water distribution, service interruptions, and other community water-related information.
+5.	To provide a water reporting feature that allows residents to submit complaints and concerns regarding weak water flow, pipe damage, water quality, insufficient supply, delayed schedules, and other water distribution problems.
+6.	To implement a water assistance request feature that allows residents to submit requests for additional water supply and monitor the progress of their requests.
+7.	To provide a submission tracking feature that generates tracking reference numbers for resident reports and requests, allowing residents to monitor their submission status and view official responses from administrators.
+8.	To develop an administrator management portal that enables authorized personnel to manage registered residents, barangay and service zones, water sources, distribution schedules, water allocation records, distribution personnel, announcements, reports, water assistance requests, analytics, and record histories.
+9.	To provide a water source monitoring and recording feature that allows administrators to maintain information about water availability and service conditions in different community service areas.
+10.	To maintain organized records of resident accounts, water distribution schedules, submitted reports, assistance requests, administrative actions, and their corresponding statuses using a centralized database.
+11.	To implement activity logs and read-receipt notification features that help residents and administrators monitor relevant updates and activities within the system.
+12.	To apply the four fundamental principles of Object-Oriented Programming such us abstraction, encapsulation, inheritance, and polymorphism in developing the system's Java classes, business logic, and submission management processes.
+13.	To improve the accessibility of community water information by allowing residents and administrators to access their respective portals through desktop and mobile web browsers connected to the same network as the running application.
 
 ## 👥Target Users
 | User | How they use AgosPantay |
