@@ -61,25 +61,16 @@ To develop AgosPantay, a Java-based web application that provides a centralized 
 12.	To apply the four fundamental principles of Object-Oriented Programming such us abstraction, encapsulation, inheritance, and polymorphism in developing the system's Java classes, business logic, and submission management processes.
 13.	To improve the accessibility of community water information by allowing residents and administrators to access their respective portals through desktop and mobile web browsers connected to the same network as the running application.
 
-## 👥Target Users
-| Target User | How They Will Use the System |
+
+## Target Users
+AgosPantay is designed primarily for two categories of users:
+| **Target User** | **How They Will Use the System** |
 |---|---|
-| **Community Residents** |•	Register an account and securely sign in. •	Complete and update their personal profiles and service area information. •	View water distribution schedules, local water source status, and assigned distribution personnel relevant to their registered area. •	Check distribution dates using the schedule calendar. •	Read community announcements and water service advisories. •	Submit reports concerning water distribution problems. •	Request additional water assistance. •	Track the status of their submitted reports and requests using tracking codes. •	View administrator responses and mark notifications as read. •	Access water conservation information and emergency contact details.|
-| **Barangay Officials and Water Management Personnel (Administrators)** | •	View the community water management dashboard.
-•	Manage registered resident accounts and account statuses
-•	Organize barangays, zones, and service areas.
-•	Maintain water source information and recorded supply conditions.
-•	Create and manage water distribution schedules.
-•	Maintain water allocation records.
-•	Manage water management personnel information.
-•	Publish announcements and advisories.
-•	Review resident reports and complaints.
-•	Review and process water assistance requests.
-•	Update submission statuses and provide official responses.
-•	Review analytics summaries, complete records history, and system activity logs.
-•	Manage portal community and barangay settings. |
+| **Community Residents** | - Register an account and securely sign in.<br>- Complete and update their personal profiles and service area information.<br>- View water distribution schedules, local water source status, and assigned distribution personnel relevant to their registered area.<br>- Check distribution dates using the schedule calendar.<br>- Read community announcements and water service advisories.<br>- Submit reports concerning water distribution problems.<br>- Request additional water assistance.<br>- Track the status of their submitted reports and requests using tracking codes.<br>- View administrator responses and mark notifications as read.<br>- Access water conservation information and emergency contact details. |
+| **Barangay Officials and Water Management Personnel (Administrators)** | - View the community water management dashboard.<br>- Manage registered resident accounts and account statuses.<br>- Organize barangays, zones, and service areas.<br>- Maintain water source information and recorded supply conditions.<br>- Create and manage water distribution schedules.<br>- Maintain water allocation records.<br>- Manage water management personnel information.<br>- Publish announcements and advisories.<br>- Review resident reports and complaints.<br>- Review and process water assistance requests.<br>- Update submission statuses and provide official responses.<br>- Review analytics summaries, complete records history, and system activity logs.<br>- Manage portal community and barangay settings. |
 
 ## ✨Main Features
+
 ### Resident Portal
  
 | Feature | Description |
