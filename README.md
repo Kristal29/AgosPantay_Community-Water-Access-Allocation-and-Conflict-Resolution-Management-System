@@ -141,55 +141,100 @@ The abstract class `WaterSubmission` defines the common properties and validatio
 Fields in `WaterSubmission`, `WaterReport`, and `WaterRequest` are declared `private`, with controlled access through getters and state-transition methods. `updateStatus()` checks that a requested status change is allowed by the submission's `CommunityModule` before changing internal state, which prevents invalid status transitions.
  
 ### Inheritance
- 
-| Class | Role |
+The system uses inheritance to reuse common submission properties and methods.
+
+| **Class** | **Role** |
 |---|---|
-| `WaterSubmission` | Abstract superclass with common submission fields, serialization structure (`fields()`), and status rules |
-| `WaterReport` | Extends `WaterSubmission` with report-specific attributes (location, details, category, priority) and validation rules |
-| `WaterRequest` | Extends `WaterSubmission` with request-specific attributes (quantity, householdSize, reason) and range validations |
- 
+| `WaterSubmission` | Abstract superclass containing common submission fields, getters, validation structure, status handling, and the `fields()` method. |
+| `WaterReport` | Extends `WaterSubmission` with report-specific attributes such as location, details, category, and priority, including its own validation rules. |
+| `WaterRequest` | Extends `WaterSubmission` with request-specific attributes such as quantity, household size, and reason, including its own validation rules. |
+
 ### Polymorphism
-- `ResidentService.submit(WaterSubmission, String)` accepts any `WaterSubmission` and calls `validateForSubmission()` and `fields()`, which dispatch to the overridden `validateDetails()` and `detailFields()` of either `WaterReport` or `WaterRequest`.
-- `AdminService.update()` reconstructs records into their `WaterSubmission` subtypes so `updateStatus()` enforces the right statuses for each type:
-  - **Reports:** Submitted, Under Review, Action Taken, Resolved, Rejected
-  - **Requests:** Submitted, Under Review, Approved, Fulfilled, Rejected
+- `ResidentService.submit(WaterSubmission, String)` accepts a `WaterSubmission` object, allowing it to process either a `WaterReport` or a `WaterRequest`. Calls to `validateDetails()`, `detailFields()`, and `module()` execute the overridden methods of the actual subclass.
+- `AdminService` uses `SubmissionRecords.forReview()` to reconstruct the appropriate `WaterSubmission` subtype when processing a status update. The `updateStatus()` method then checks the requested status against the allowed statuses for that submission type.
+
+The system supports the following submission statuses:
+- **Water Reports:** Submitted, Under Review, Action Taken, Resolved, Rejected.
+- **Water Assistance Requests:** Submitted, Under Review, Approved, Fulfilled, Rejected.
 
  ## Instructions for Running the Program
 ### Requirements
- 
-- **Java 21 (JDK 21)**
-- **Maven** (or use IntelliJ IDEA, which bundles Maven)
-- A web browser (desktop or mobile)
-### Option A: Run with Maven (command line)
- 
-```bash
-# 1. Clone the repository
-git clone https://github.com/Kristal29/AgosPantay_Community-Water-Access-Allocation-and-Conflict-Resolution-Management-System.git
- 
-# 2. Go to the project folder (the Maven project is inside the AgosPantay folder)
-cd AgosPantay_Community-Water-Access-Allocation-and-Conflict-Resolution-Management-System/AgosPantay
- 
-# 3. Build and run
-mvn spring-boot:run
-```
- 
-Or build the runnable JAR and run it:
- 
-```bash
-mvn clean package
-java -jar target/AgosPantay_Project.jar
-```
 
-### Access from other devices (classroom demo)
- 
-1. Connect the other device (phone or laptop) to the **same Wi-Fi network** as the computer running AgosPantay.
-2. Find the host computer's IP address (`ipconfig` on Windows, `ifconfig` or `ip a` on Mac and Linux).
-3. On the other device, open `http://<host-computer-IP>:8080`.
-If the page does not load, check that the host computer's firewall allows incoming connections on that port.
+- **Java 21 (JDK 21)**
+- **Apache Maven** (or IntelliJ IDEA with Maven support)
+- A web browser (desktop or mobile)
+
+### Option A: Run with Maven (Command Line)
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/Kristal29/AgosPantay_Community-Water-Access-Allocation-and-Conflict-Resolution-Management-System.git
+   ```
+
+2. Navigate to the project directory containing `pom.xml`:
+
+   ```bash
+   cd AgosPantay_Community-Water-Access-Allocation-and-Conflict-Resolution-Management-System
+   ```
+
+   If the Maven project is inside a separate `AgosPantay` folder, navigate into that folder before proceeding.
+
+3. Build and run the application:
+
+   ```bash
+   mvn spring-boot:run
+   ```
+
+4. Once the application starts successfully, open:
+
+   ```text
+   http://localhost:8080
+   ```
+   
+ ### Option B: Build and Run the Executable JAR
+
+1. Navigate to the project directory containing `pom.xml`.
+2. Build the executable JAR:
+
+   ```bash
+   mvn clean package
+   ```
+
+3. Run the generated JAR file:
+
+   ```bash
+   java -jar target/AgosPantay.jar
+   ```
+
+4. Open the application in your browser:
+
+   ```text
+   http://localhost:8080
+   ```
+
+### Access from Other Devices (Classroom Demonstration)
+
+1. Connect the other device (phone or laptop) to the same Wi-Fi network as the computer running AgosPantay.
+2. Find the host computer's local IP address:
+   - **Windows:** Open Command Prompt and execute `ipconfig`. Look for the IPv4 Address under the active Wi-Fi adapter.
+   - **Linux:** Open the terminal and execute `ip a`.
+   - **macOS:** Check the Wi-Fi network details under System Settings → Network.
+3. On the other device, open a web browser and enter:
+
+   ```text
+   http://<host-computer-IP>:8080
+   ```
+
+   Replace `<host-computer-IP>` with the actual IPv4 address of the host computer.
+
+4. If the page does not load, check whether the host computer's firewall allows incoming connections through port `8080` and whether both devices can communicate over the same network.
 
 ### Database
 
-AgosPantay uses a local **H2 file-based database**, so no separate database installation is needed. Data is stored on the computer running the application.
+AgosPantay uses a local **H2 file-based database**, so no separate database installation is required.
+
+Database records are stored on the computer running the application, specifically in the `data/agospantay.mv.db` file. This allows the system to retain its records between application restarts.
 
 ## Sample Screenshots
  
