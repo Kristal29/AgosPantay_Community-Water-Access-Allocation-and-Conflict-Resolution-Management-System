@@ -15,7 +15,7 @@
 3. [Project Objectives](#project-objectives)
 4. [Target Users](#target-users)
 5. [Main Features](#main-features)
-6. [Technologies Used](#technologies-used)
+6. [Technologies and Development Tools](#technologies-and-development-tools)
 7. [Team Members and Roles](#team-members-and-roles)
 8. [OOP Concepts Demonstrated](#oop-concepts-demonstrated)
 9. [Instructions for Running the Program](#instructions-for-running-the-program)
@@ -70,7 +70,7 @@ AgosPantay is designed primarily for two categories of users:
 | **Barangay Officials and Water Management Personnel (Administrators)** | - View the community water management dashboard.<br>- Manage registered resident accounts and account statuses.<br>- Organize barangays, zones, and service areas.<br>- Maintain water source information and recorded supply conditions.<br>- Create and manage water distribution schedules.<br>- Maintain water allocation records.<br>- Manage water management personnel information.<br>- Publish announcements and advisories.<br>- Review resident reports and complaints.<br>- Review and process water assistance requests.<br>- Update submission statuses and provide official responses.<br>- Review analytics summaries, complete records history, and system activity logs.<br>- Manage portal community and barangay settings. |
 
 ## ✨Main Features
-
+The system consists of two main interfaces:
 ### Resident Portal
  
 | Feature | Description |
@@ -199,7 +199,7 @@ AgosPantay uses a local **H2 file-based database**, so no separate database inst
 | ![Resident Submission](screenshots/02-Resident-Submission.png) | ![Resident Status](screenshots/04-Resident-Status.png) |
 
 ## Known Limitations
-
+Despite providing centralized community water management functionalities, AgosPantay has the following limitations:
 1.	**Single Community Implementation:** The current prototype is designed to support one community at a time. It is not yet designed for simultaneous independent management of multiple communities.
 2.	**Manual Water Information Entry:** Water source conditions, water availability, distribution schedules, and allocation information are recorded and maintained manually by authorized administrators. The system does not automatically measure actual water levels or pressure through sensors.
 3.	**No Automatic GPS Tracking:** The current version uses registered barangay, zone, and purok text identifiers rather than GPS-based household location tracking.
