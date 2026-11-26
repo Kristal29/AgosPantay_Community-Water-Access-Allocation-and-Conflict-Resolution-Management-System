@@ -15,7 +15,7 @@
 3. [Project Objectives](#project-objectives)
 4. [Target Users](#target-users)
 5. [Main Features](#main-features)
-6. [Technologies and Development Tools](#technologies-and-development-tools)
+6. [Technologies Used](#technologies-used)
 7. [Team Members and Roles](#team-members-and-roles)
 8. [OOP Concepts Demonstrated](#oop-concepts-demonstrated)
 9. [Instructions for Running the Program](#instructions-for-running-the-program)
@@ -106,7 +106,7 @@ The system consists of two main interfaces:
 | Activity Logs | Maintains chronological records of user and administrative activities for monitoring and accountability.|
 | System Settings |Allows administrators to configure community and barangay portal information and other system settings.|
 
-## 🤖 Technologies and Development Tools
+## 🤖 Technologies Used
 
 The following technologies and tools are used in developing AgosPantay:
 
