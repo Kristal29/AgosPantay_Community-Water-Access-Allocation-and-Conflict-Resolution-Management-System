@@ -195,14 +195,16 @@ AgosPantay uses a local **H2 file-based database**, so no separate database inst
 
 ## Known Limitations
 
-1. **Implementation in a single community** – works on a single community at a time, not multiple independent communities.
-2. **Water information input manually** – water sources’ conditions, availability, schedules, and allocation data are entered by administrators; there are no water level/pressure sensors.
-3. **No GPS-based tracking system** – works with text barangay, zone, and purok identifiers without the GPS-based location of households.
-4. **Network dependence** – the application must be run on its designated Java host; other devices connect to it using an accessible network (same Wi-Fi for class demo).
-5. **Host computer database** – uses an H2 file database on the host computer instead of a cloud-based database.
-6. **Refresh-based updates** – the administrator’s changes become visible in the resident portal upon refresh of the website or opening of a new page; no synchronization is used.
-7. **Notifications based on portals only** – there are no in-portal notifications and announcements, as well as SMS service.
-8. **No automatic water distribution control** – scheduling and allocation of water is done digitally without control of pumps, valves, and pipelines.
+1.	**Single Community Implementation:** The current prototype is designed to support one community at a time. It is not yet designed for simultaneous independent management of multiple communities.
+2.	**Manual Water Information Entry:** Water source conditions, water availability, distribution schedules, and allocation information are recorded and maintained manually by authorized administrators. The system does not automatically measure actual water levels or pressure through sensors.
+3.	**No Automatic GPS Tracking:** The current version uses registered barangay, zone, and purok text identifiers rather than GPS-based household location tracking.
+4.	**Internet and Network Dependency:** The application must be running on its designated Java host. Other devices can access it through a reachable network connection. For the classroom demonstration, devices should be connected to the same Wi-Fi network.
+5.	**Local File-Based Database Storage:** The system uses an H2 file-based database stored on the computer running the application. Records are maintained through the local database rather than a separate cloud-hosted database.
+6.	**Refresh-Based Updates:** Changes made by administrators are reflected in the resident portal when the relevant records are refreshed or the corresponding page is reopened. The current prototype does not establish automatic real-time synchronization.
+7.	**Limited Automated Notifications:** The system provides notification and announcement functionalities within its portals but does not include an established automatic SMS notification service.
+8.	**No Automatic Water Distribution Control:** AgosPantay manages and records water distribution schedules and allocations digitally without physically controlling water pumps, valves, or pipelines.
+
+
 
 ## Future Improvements
  
