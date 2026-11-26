@@ -91,20 +91,20 @@ AgosPantay is designed primarily for two categories of users:
  
 | Feature | Description |
 |---|---|
-| Administrator Dashboard | Overview of residents, schedules, pending reports, announcements, and water availability |
-| Residents Management | Manage resident information and account statuses |
-| Barangay and Zones Management | Organize barangays, zones, and service areas |
-| Water Sources Management | Maintain water sources and their availability conditions |
-| Distribution Schedules Management | Create and manage schedules by area, date, and opening and closing times |
-| Water Allocation Management | Record and monitor water allocation per area |
-| Distribution Personnel Management | Manage personnel involved in water distribution |
-| Announcements Management | Create, edit, and publish announcements and advisories |
-| Reports and Complaints Management | Review reports, update statuses, and respond officially |
-| Water Requests Management | Approve, fulfill, or reject requests for additional water |
-| Analytics and Reports | Summary metrics and breakdowns of submissions and operations |
-| Records History | Consolidated view of historical records |
-| Activity Logs | Chronological audit records of user and admin activities |
-| System Settings | Configure community and barangay portal details |
+| Administrator Dashboard | Displays an overview of registered residents, water distribution schedules, pending reports, announcements, and recorded water availability.|
+| Residents Management | Allows administrators to view and manage registered resident information and account statuses.|
+| Barangay and Zones Management | Allows administrators to organize and manage barangay locations, community zones, and water distribution service areas. |
+| Water Sources Management | Allows administrators to maintain records of community water sources and their recorded availability conditions.|
+| Distribution Schedules Management | Enables administrators to create, update, and manage water distribution schedules based on specific areas, dates, and opening and closing times.|
+| Water Allocation Management | Allows administrators to record, organize, and monitor water allocation information for different community areas.|
+| Distribution Personnel Management | Allows administrators to manage information about personnel involved in community water distribution and management. |
+| Announcements Management | Enables administrators to create, edit, update, and publish official announcements and water service advisories.|
+| Reports and Complaints Management | Allows administrators to review residents' water-related reports and complaints, update their statuses, and provide official responses.|
+| Water Requests Management | Enables administrators to review, approve, fulfill, or reject residents' requests for additional water supply.|
+| Analytics and Reports | Displays summarized information and statistical breakdowns of community water submissions and distribution operations.|
+| Records History | Provides administrators with access to historical records of community water management activities and transactions.|
+| Activity Logs | Maintains chronological records of user and administrative activities for monitoring and accountability.|
+| System Settings |Allows administrators to configure community and barangay portal information and other system settings.|
 
 ## 🤖Technologies Used
 | Technology / Tool | Purpose |
