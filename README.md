@@ -106,18 +106,23 @@ AgosPantay is designed primarily for two categories of users:
 | Activity Logs | Maintains chronological records of user and administrative activities for monitoring and accountability.|
 | System Settings |Allows administrators to configure community and barangay portal information and other system settings.|
 
-## 🤖Technologies Used
-| Technology / Tool | Purpose |
+## 🤖 Technologies and Development Tools
+
+The following technologies and tools are used in developing AgosPantay:
+
+| **Technology / Tool** | **Purpose** |
 |---|---|
-| **Java 21** | Main language for application logic, data models, validation, and OOP implementation |
-| **Spring Boot** | Backend framework, dependency injection, and REST API controllers |
-| **Spring Security** | Authentication and role-based access control |
-| **JDBC** | Communication between the Java application and the database |
-| **H2 Database** | Stores resident profiles, accounts, water records, reports, requests, and other system data |
-| **HTML5 / CSS3 / JavaScript** | Resident and administrator web interfaces, styling, and frontend interactions |
-| **Maven** | Dependency management and packaging of the runnable JAR |
-| **IntelliJ IDEA** | Development and debugging |
-| **Git & GitHub** | Version control and team collaboration |
+| **Java 21** | Main programming language for application logic, data models, validation, and OOP implementation. |
+| **Spring Boot** | Provides the backend application framework, dependency injection, and REST API controllers. |
+| **Spring Security** | Handles authentication and role-based access control. |
+| **JDBC** | Facilitates communication between the Java application and the database. |
+| **H2 Database** | Stores resident profiles, accounts, water records, reports, requests, and other system information. |
+| **HTML5** | Structures the resident and administrator web interfaces. |
+| **CSS3** | Provides the layout, styling, and responsive design of the application. |
+| **JavaScript** | Handles frontend interactions, form submissions, data retrieval, and portal functionality. |
+| **Maven** | Manages project dependencies and packages the runnable JAR archive. |
+| **IntelliJ IDEA** | Used for Java development, debugging, and project management. |
+| **Git & GitHub** | Used for version control and team collaboration. |
 
 ## Team Members and Roles
 **Team 6 – Triple J** | Section **CS-2105**
