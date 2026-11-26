@@ -254,17 +254,15 @@ Despite providing centralized community water management functionalities, AgosPa
 7.	**Limited Automated Notifications:** The system provides notification and announcement functionalities within its portals but does not include an established automatic SMS notification service.
 8.	**No Automatic Water Distribution Control:** AgosPantay manages and records water distribution schedules and allocations digitally without physically controlling water pumps, valves, or pipelines.
 
-
-
 ## Future Improvements
- 
-- Support multiple communities with independent management
-- Integrate sensors for automatic water level and pressure readings
-- Add GPS-based household location tracking
-- Move to a cloud-hosted database
-- Add real-time updates between the administrator and resident portals
-- Add SMS notifications
-- Integrate with pumps or valves for automated distribution control
+The following enhancements may be considered for future versions of AgosPantay to improve its functionality, accessibility, and overall community water management capabilities:
+1. **Multi-Community Management:** Expand the system to support multiple barangays or communities, each with independent administrators, residents, water distribution schedules, and management records.
+2. **Automated Water Monitoring:** Integrate water level and pressure sensors to provide automatic readings of water source conditions and improve the monitoring of available water supply.
+3. **GPS-Based Location Tracking:** Incorporate GPS functionality to identify household locations and provide more accurate location references for water distribution and service management.
+4. **Cloud-Based Database:** Migrate the local H2 database to a cloud-hosted database to support centralized data storage, remote access, and improved data accessibility.
+5. **Real-Time Data Synchronization:** Implement real-time updates between the administrator and resident portals so that changes in schedules, announcements, reports, and request statuses are reflected without requiring manual page refreshes.
+6. **Automated SMS Notifications:** Integrate an SMS notification service to send residents updates about water distribution schedules, service interruptions, announcements, and the status of their submitted reports and requests.
+7. **Automated Water Distribution Control:** Explore integration with compatible water pumps and valves to support automated water distribution based on authorized schedules and allocation settings.
 
 ## Project Contributors
 | Name | Role | GitHub |
